@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App p-5">
-      <h1>Contacts</h1>
+      <h1>My Contacts</h1>
       <div className='p-5'>
         <ContactForm addContact={addContact} />
       </div>

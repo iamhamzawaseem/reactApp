@@ -16,8 +16,9 @@ interface ContactListProps {
 function ContactList({ deleteContact, contacts }: ContactListProps) {
     return (
         <>
+            <h3>Contact List</h3>
             <ul>
-                {contacts.map((contact: Contact) => <ContactCard id={contact.id} name={contact.name} contactNumber={contact.contactNumber} deleteContact={deleteContact} />)}
+                {contacts?.length ? contacts.map((contact: Contact) => <ContactCard id={contact.id} name={contact.name} contactNumber={contact.contactNumber} deleteContact={deleteContact} />) : "No contacts found."}
             </ul>
         </>
     );
